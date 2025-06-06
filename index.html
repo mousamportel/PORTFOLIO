@@ -16,6 +16,7 @@
 
     <!-- Alpine.js - Load first -->
     <script
+      nonce="imoo"
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"
     ></script>
@@ -42,11 +43,12 @@
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
 
     <!-- Core CSS and Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" nonce="chart"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" nonce="tailwind"></script>
     <script
       defer
+      nonce="apex chart"
       src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"
     ></script>
     <link
@@ -55,7 +57,7 @@
     />
 
     <!-- Project-specific styles -->
-    <style>
+    <style nonce="base">
       /* Base styles */
       :root {
         --primary-light: #8a2be2;
@@ -235,7 +237,7 @@
     <link rel="icon" type="image/x-icon" href="index.html" />
 
     <!-- Header Scripts -->
-    <script id="header-scripts">
+    <script id="header-scripts" nonce="header-scripts">
       // This script tag will be replaced with actual scripts.head content
       if (window.scripts && window.scripts.head) {
         document.getElementById("header-scripts").outerHTML =
@@ -244,7 +246,7 @@
     </script>
 
     <!-- Project Configuration -->
-    <script>
+    <script nonce="config">
       window.projectConfig = {
         name: "Creative Portfolio",
         type: "",
@@ -261,7 +263,7 @@
         },
       };
     </script>
-    <style>
+    <style nonce="base">
       [data-section-id] {
         display: none;
       }
@@ -1523,7 +1525,7 @@
     </main>
 
     <!-- Core functionality scripts -->
-    <script>
+    <script nonce="core-scripts">
       document.addEventListener("DOMContentLoaded", function () {
         // Add interactive behaviors
         const interactiveElements = document.querySelectorAll(
@@ -1602,7 +1604,7 @@
     </script>
 
     <!-- Body Scripts -->
-    <script id="body-scripts">
+    <script id="body-scripts" nonce="body-script">
       // This script tag will be replaced with actual scripts.body content
       if (window.scripts && window.scripts.body) {
         document.getElementById("body-scripts").outerHTML = window.scripts.body;
